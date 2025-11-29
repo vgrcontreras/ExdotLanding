@@ -1,0 +1,133 @@
+{
+  "project": {
+    "name": "exdot",
+    "type": "Landing Page de Consultoria em Dados",
+    "brand": "exdot - Inteligência em Dados & Automação",
+    "language": "Portuguese (Brazil)"
+  },
+  "design_requirements": {
+    "style": "Moderno, profissional, tech-forward",
+    "color_scheme": "Gradiente roxo/violeta como cor primária, fundo escuro com gradientes sutis, texto branco/claro, cores de destaque em ciano/azul",
+    "typography": "Sans-serif moderno e limpo. Títulos grandes e impactantes, texto do corpo legível",
+    "layout": "Página única com scroll e seções distintas, design responsivo"
+  },
+  "sections": [
+    {
+      "name": "Hero",
+      "description": "Abertura impactante com fundo gradiente",
+      "elements": [
+        "Barra de navegação com logo exdot e itens do menu (Sobre, Serviços, Cases, Contato)",
+        "Título principal: 'Inteligência em Dados Poderosa, Decisões Empresariais Mais Inteligentes'",
+        "Subtítulo sobre transformar dados em insights acionáveis para crescimento empresarial",
+        "Botão CTA primário: 'Comece Agora'",
+        "Visual hero: Visualização abstrata de dados ou formas geométricas com efeitos de gradiente",
+        "Métricas-chave ou indicadores de prova social (ex: '3x Análises Mais Rápidas', '99.5% Precisão nos Dados')"
+      ]
+    },
+    {
+      "name": "Why exdot",
+      "description": "Por que escolher exdot - nossa proposta de valor única",
+      "elements": [
+        "Título da seção: 'Por que a exdot foi criada para preencher a lacuna entre desafios complexos de dados e resultados empresariais reais'",
+        "Grid de estatísticas mostrando métricas de sucesso dos clientes",
+        "Layout de 4 colunas com benefícios-chave:",
+        "  • '75% Decisões Mais Rápidas' - Reduza tempo de análise com insights orientados por dados",
+        "  • '90% Automação de Processos' - Automatize tarefas rotineiras e foque na estratégia",
+        "  • '40% Redução de Custos' - Otimize operações com soluções inteligentes",
+        "  • '10M+ Pontos de Dados Processados' - Processe grandes volumes em tempo real"
+      ]
+    },
+    {
+      "name": "Our Services",
+      "description": "Nossos serviços especializados em dados",
+      "elements": [
+        "Título da seção: 'Nossos Serviços'",
+        "4 cards de serviços em layout grid:",
+        "  1. Engenharia de Dados - Automação de pipelines e processos ETL modernos",
+        "  2. Business Intelligence - Criação de dashboards e acompanhamento de KPIs",
+        "  3. Automação de Processos - Otimização de fluxos de trabalho e eficiência operacional",
+        "  4. Migração para Nuvem - AWS, Snowflake e stack moderno de dados",
+        "Cada card com ícone, título, descrição e lista de benefícios específicos"
+      ]
+    },
+    {
+      "name": "Testimonials",
+      "description": "Depoimentos e casos de sucesso dos clientes",
+      "elements": [
+        "Título da seção: 'O que nossos clientes dizem'",
+        "Grid de cards de depoimentos de clientes",
+        "Incluir nomes dos clientes, empresas e resultados específicos alcançados",
+        "Mix de diferentes setores (fintech, e-commerce, manufatura, serviços financeiros)",
+        "Fotos ou logos das empresas para credibilidade",
+        "Foco em resultados quantificáveis e ROI obtido"
+      ]
+    },
+    {
+      "name": "CTA",
+      "description": "Chamada final para ação com mensagem convincente",
+      "elements": [
+        "Fundo gradiente similar ao hero",
+        "Título: 'Deixe a exdot cuidar da complexidade—para que você possa focar no crescimento e inovação'",
+        "Botão CTA primário: 'Agende uma Consultoria'",
+        "Texto de apoio sobre avaliação inicial gratuita",
+        "Elementos visuais que reforcem confiança e urgência"
+      ]
+    },
+    {
+      "name": "Footer",
+      "description": "Informações da empresa e navegação",
+      "elements": [
+        "Logo exdot e slogan",
+        "Informações de contato (telefone, email, endereço)",
+        "Links para redes sociais (LinkedIn, GitHub)",
+        "Menu de navegação",
+        "Informações de copyright e legais"
+      ]
+    }
+  ],
+  "visual_elements": {
+    "background_style": "Tema escuro com gradientes sutis, cores primárias roxo/violeta",
+    "cards": "Efeito glassmorphism com bordas e sombras sutis",
+    "buttons": "Preenchimento gradiente, cantos arredondados, efeitos de hover",
+    "icons": "Ícones modernos e minimalistas ou formas geométricas abstratas",
+    "images": "Gráficos de visualização de dados, ilustrações tech abstratas, fotos de clientes"
+  },
+  "content_focus": {
+    "target_audience": "Líderes empresariais, CTOs, gestores de dados buscando transformação digital",
+    "key_messages": [
+      "Transforme dados complexos em inteligência empresarial",
+      "Soluções escaláveis e automatizadas que crescem com seu negócio",
+      "Consultoria especializada com resultados comprovados",
+      "Arquitetura moderna cloud-native e melhores práticas"
+    ],
+    "industry_expertise": "Serviços financeiros, fintech, e-commerce, SaaS, manufatura, saúde",
+    "technical_specialties": "AWS, Python, SQL, Snowflake, PowerBI, dbt, Airflow, automação"
+  },
+  "interactive_elements": {
+    "animations": "Animações suaves de scroll, efeitos de hover em cards, mudanças de gradiente",
+    "micro_interactions": "Estados de hover em botões, elevação de cards no hover, transições suaves",
+    "responsive_behavior": "Design mobile-first, navegação retrátil, layouts empilhados no mobile"
+  },
+  "brand_personality": {
+    "tone": "Profissional mas acessível, confiante, orientado a resultados",
+    "values": "Inovação, confiabilidade, transparência, expertise técnica",
+    "differentiators": "Expertise no mercado brasileiro, especialização em finops, soluções completas de dados"
+  },
+  "copy_suggestions": {
+    "hero_variations": [
+      "Transforme Dados em Decisões Inteligentes",
+      "Inteligência em Dados que Acelera seu Crescimento",
+      "Dados Complexos, Soluções Simples"
+    ],
+    "value_props": [
+      "Especialistas em dados financeiros e automação",
+      "Soluções personalizadas para o mercado brasileiro",
+      "Da coleta à visualização: dados que geram valor"
+    ],
+    "cta_variations": [
+      "Comece sua Transformação Digital",
+      "Agende uma Consultoria Gratuita",
+      "Descubra o Potencial dos seus Dados"
+    ]
+  }
+}
