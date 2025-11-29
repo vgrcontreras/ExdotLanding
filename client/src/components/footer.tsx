@@ -3,15 +3,15 @@ import { Linkedin, Github, Twitter } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-background border-t border-border pt-16 pb-8 text-sm" id="contato">
+    <footer className="bg-black border-t border-white/10 pt-16 pb-8 text-sm" id="contato">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-6">
-              <div className="w-6 h-6 bg-gradient-to-br from-primary to-secondary rounded flex items-center justify-center shadow-sm">
+              <div className="w-6 h-6 bg-gradient-to-br from-primary to-secondary rounded flex items-center justify-center">
                 <span className="text-white font-bold text-xs">e</span>
               </div>
-              <span className="text-xl font-bold font-display text-foreground">
+              <span className="text-xl font-bold font-display text-white">
                 exdot
               </span>
             </div>
@@ -20,20 +20,20 @@ export function Footer() {
               Ajudamos empresas a tomar decisões mais inteligentes através de dados.
             </p>
             <div className="flex gap-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="#" className="text-muted-foreground hover:text-white transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="#" className="text-muted-foreground hover:text-white transition-colors">
                 <Github className="w-5 h-5" />
               </a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a href="#" className="text-muted-foreground hover:text-white transition-colors">
                 <Twitter className="w-5 h-5" />
               </a>
             </div>
           </div>
 
           <div>
-            <h3 className="font-bold text-foreground mb-4">Soluções</h3>
+            <h3 className="font-bold text-white mb-4">Soluções</h3>
             <ul className="space-y-2 text-muted-foreground">
               <li><a href="#" className="hover:text-primary transition-colors">Engenharia de Dados</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Business Intelligence</a></li>
@@ -43,7 +43,7 @@ export function Footer() {
           </div>
 
           <div>
-            <h3 className="font-bold text-foreground mb-4">Empresa</h3>
+            <h3 className="font-bold text-white mb-4">Empresa</h3>
             <ul className="space-y-2 text-muted-foreground">
               <li><a href="#" className="hover:text-primary transition-colors">Sobre Nós</a></li>
               <li><a href="#" className="hover:text-primary transition-colors">Cases</a></li>
@@ -53,13 +53,13 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-muted-foreground text-xs">
             &copy; {new Date().getFullYear()} exdot. Todos os direitos reservados.
           </p>
           <div className="flex gap-6 text-xs text-muted-foreground">
-            <a href="#" className="hover:text-foreground">Privacidade</a>
-            <a href="#" className="hover:text-foreground">Termos</a>
+            <a href="#" className="hover:text-white">Privacidade</a>
+            <a href="#" className="hover:text-white">Termos</a>
           </div>
         </div>
       </div>
