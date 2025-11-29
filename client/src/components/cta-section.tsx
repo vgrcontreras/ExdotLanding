@@ -1,38 +1,40 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 
 export function CTA() {
   return (
-    <section className="py-24 relative overflow-hidden">
-      {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-r from-primary to-purple-800 opacity-20" />
-      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 mix-blend-overlay" />
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section className="py-24 bg-black">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="max-w-4xl mx-auto text-center bg-card/30 backdrop-blur-xl rounded-3xl border border-white/10 p-8 md:p-16"
+          className="relative rounded-[2.5rem] overflow-hidden p-12 md:p-24 text-center border border-white/10"
         >
-          <h2 className="text-3xl md:text-5xl font-bold font-display text-white mb-6">
-            Pronto para transformar seus dados em crescimento?
-          </h2>
-          <p className="text-lg text-white/80 mb-10 max-w-2xl mx-auto">
-            Deixe a exdot cuidar da complexidade—para que você possa focar na inovação e no futuro do seu negócio.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-bold text-lg h-14 px-8 rounded-full">
-              Agende uma Consultoria
-            </Button>
-            <Button size="lg" variant="outline" className="border-white/20 text-white hover:bg-white/10 font-medium text-lg h-14 px-8 rounded-full">
-              Fale com um Especialista
-            </Button>
+          {/* Background Gradient */}
+          <div className="absolute inset-0 bg-gradient-to-b from-purple-900/50 via-black to-black z-0" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-primary/20 blur-[100px] z-0" />
+
+          <div className="relative z-10">
+            <div className="flex items-center justify-center gap-2 mb-8">
+              <div className="flex -space-x-2">
+                {[1, 2, 3].map((i) => (
+                  <div key={i} className="w-8 h-8 rounded-full bg-white/10 border border-white/20" />
+                ))}
+              </div>
+              <span className="text-white font-medium ml-2">Junte-se a 50k+ Usuários</span>
+            </div>
+
+            <h2 className="text-3xl md:text-5xl font-bold font-display text-white mb-6 max-w-3xl mx-auto leading-tight">
+              Deixe a exdot lidar com a complexidade—para que você foque em inovação.
+            </h2>
+            
+            <div className="mt-10">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-10 h-14 rounded-full text-lg font-semibold shadow-[0_0_30px_rgba(139,92,246,0.4)]">
+                Comece Gratuitamente
+              </Button>
+            </div>
           </div>
-          <p className="mt-6 text-sm text-white/50">
-            Avaliação inicial gratuita • Sem compromisso
-          </p>
         </motion.div>
       </div>
     </section>

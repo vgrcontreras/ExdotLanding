@@ -1,55 +1,27 @@
 import { motion } from "framer-motion";
-import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Server, BarChart3, Workflow, Cloud } from "lucide-react";
+import { Card, CardContent } from "@/components/ui/card";
+import { ArrowUpRight } from "lucide-react";
 
-const services = [
-  {
-    icon: Server,
-    title: "Engenharia de Dados",
-    description: "Arquiteturas robustas para seus dados.",
-    features: ["Pipelines ETL modernos", "Data Warehousing", "Governança de Dados", "Integração de APIs"]
-  },
-  {
-    icon: BarChart3,
-    title: "Business Intelligence",
-    description: "Dashboards que contam histórias.",
-    features: ["Power BI & Tableau", "KPIs em Tempo Real", "Modelagem de Dados", "Self-Service Analytics"]
-  },
-  {
-    icon: Workflow,
-    title: "Automação de Processos",
-    description: "Eficiência em escala.",
-    features: ["RPA & Scripts Python", "Otimização de Fluxos", "Redução de Erros", "Alertas Automáticos"]
-  },
-  {
-    icon: Cloud,
-    title: "Migração para Nuvem",
-    description: "Modernize sua infraestrutura.",
-    features: ["AWS, Azure & GCP", "Snowflake Solutions", "Arquitetura Serverless", "Otimização de Custos (FinOps)"]
-  }
+const solutions = [
+  { title: "Automação", icon: "⚡" },
+  { title: "Analytics", icon: "📊" },
+  { title: "Segurança", icon: "🛡️" },
+  { title: "Produtividade", icon: "🚀" }
 ];
 
 export function Services() {
   return (
-    <section className="py-24 bg-gradient-to-b from-background to-black" id="servicos">
+    <section className="py-24 bg-black" id="servicos">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-          <div className="max-w-2xl">
-            <h2 className="text-3xl md:text-5xl font-bold font-display text-white mb-6">
-              Nossos Serviços
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Expertise técnica profunda combinada com visão de negócios para entregar valor real.
-            </p>
-          </div>
-          <Badge variant="outline" className="w-fit h-fit px-4 py-2 text-sm border-primary/50 text-primary bg-primary/5">
-            Soluções End-to-End
-          </Badge>
+        <div className="text-center mb-16">
+          <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">Soluções</span>
+          <h2 className="text-3xl md:text-4xl font-bold font-display text-white">
+            Descubra as Soluções para seu Trabalho
+          </h2>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-          {services.map((service, index) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {solutions.map((solution, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -57,30 +29,16 @@ export function Services() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="h-full bg-card border-white/5 hover:border-secondary/50 transition-all duration-300 group overflow-hidden relative">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                
-                <CardHeader>
-                  <div className="w-14 h-14 rounded-full bg-background border border-white/10 flex items-center justify-center mb-6 group-hover:border-secondary/50 group-hover:text-secondary transition-colors">
-                    <service.icon className="w-7 h-7" />
+              <Card className="bg-card/10 border-white/10 hover:border-white/20 transition-all duration-300 group h-64 flex flex-col justify-end p-2">
+                <CardContent className="p-6 relative h-full flex flex-col justify-end">
+                  <div className="absolute top-6 right-6 opacity-50 group-hover:opacity-100 transition-opacity">
+                    <ArrowUpRight className="w-5 h-5 text-white" />
                   </div>
-                  <CardTitle className="text-2xl font-display text-white group-hover:text-secondary transition-colors">
-                    {service.title}
-                  </CardTitle>
-                  <CardDescription className="text-base mt-2">
-                    {service.description}
-                  </CardDescription>
-                </CardHeader>
-                
-                <CardContent>
-                  <ul className="space-y-3">
-                    {service.features.map((feature, i) => (
-                      <li key={i} className="flex items-center text-sm text-muted-foreground">
-                        <span className="w-1.5 h-1.5 rounded-full bg-primary mr-3" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                  
+                  <span className="text-xs text-muted-foreground mb-2 block">Solução</span>
+                  <h3 className="text-2xl font-display font-medium text-white group-hover:text-primary transition-colors">
+                    {solution.title}
+                  </h3>
                 </CardContent>
               </Card>
             </motion.div>

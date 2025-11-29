@@ -1,48 +1,46 @@
 import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
-import { Activity, Zap, TrendingUp, Database } from "lucide-react";
+import orbImage from "@assets/generated_images/glowing_purple_sphere_orb_in_black_void.png";
 
 const stats = [
   {
-    icon: Zap,
     value: "75%",
     label: "Decisões Mais Rápidas",
-    description: "Reduza tempo de análise com insights orientados por dados"
+    description: "Insights instantâneos, decisões melhores."
   },
   {
-    icon: Activity,
-    value: "90%",
-    label: "Automação",
-    description: "Automatize tarefas rotineiras e foque na estratégia"
+    value: "98%",
+    label: "Detecção de Ameaças",
+    description: "Segurança baseada em IA que nunca dorme."
   },
   {
-    icon: TrendingUp,
     value: "40%",
     label: "Redução de Custos",
-    description: "Otimize operações com soluções inteligentes"
+    description: "Automação poderosa que corta despesas operacionais."
   },
   {
-    icon: Database,
     value: "10M+",
-    label: "Dados Processados",
-    description: "Processe grandes volumes em tempo real com segurança"
+    label: "Tarefas Automatizadas",
+    description: "Reduzindo trabalho manual e aumentando eficiência."
   }
 ];
 
 export function WhyUs() {
   return (
-    <section className="py-24 bg-background relative overflow-hidden" id="sobre">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-6">
-            Por que a <span className="text-primary">exdot</span>?
-          </h2>
-          <p className="text-lg text-muted-foreground">
-            Fomos criados para preencher a lacuna entre desafios complexos de dados e resultados empresariais reais.
-          </p>
+    <section className="py-32 bg-black relative overflow-hidden" id="sobre">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        {/* Glowing Orb Centerpiece */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] opacity-40 pointer-events-none">
+           <img src={orbImage} alt="" className="w-full h-full object-contain animate-pulse-slow" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="max-w-3xl mx-auto text-center mb-24 relative z-20">
+          <h2 className="text-3xl md:text-5xl font-bold font-display text-white mb-6 leading-tight">
+            A exdot foi criada para preencher a lacuna entre tecnologia complexa e <span className="text-purple-400">resultados reais</span>.
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-12 relative z-20">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
@@ -50,23 +48,17 @@ export function WhyUs() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="text-left"
             >
-              <Card className="h-full bg-card/50 border-white/5 hover:border-primary/50 transition-colors duration-300 backdrop-blur-sm">
-                <CardContent className="p-6 flex flex-col items-center text-center h-full">
-                  <div className="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 text-primary">
-                    <stat.icon className="w-6 h-6" />
-                  </div>
-                  <div className="text-4xl font-bold text-white mb-2 font-display">
-                    {stat.value}
-                  </div>
-                  <h3 className="text-lg font-semibold text-white mb-3">
-                    {stat.label}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
-                    {stat.description}
-                  </p>
-                </CardContent>
-              </Card>
+              <div className="text-5xl font-bold text-white mb-2 font-display tracking-tight">
+                {stat.value}
+              </div>
+              <h3 className="text-lg font-semibold text-white/90 mb-2">
+                {stat.label}
+              </h3>
+              <p className="text-sm text-muted-foreground leading-relaxed max-w-[200px]">
+                {stat.description}
+              </p>
             </motion.div>
           ))}
         </div>

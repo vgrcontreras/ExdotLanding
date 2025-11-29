@@ -1,42 +1,35 @@
 import { motion } from "framer-motion";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Card, CardContent } from "@/components/ui/card";
-import { Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "A exdot transformou completamente nossa visibilidade financeira. Agora tomamos decisões baseadas em dados reais, não em suposições.",
-    author: "Ricardo Silva",
-    role: "CFO",
-    company: "Fintech Brasil",
-    initials: "RS"
+    name: "David Kim",
+    role: "Solar Tech",
+    text: "Recurso de análise preditiva é um divisor de águas para nosso negócio."
   },
   {
-    quote: "A automação dos nossos processos de ETL reduziu o tempo de engenharia em 60%. A equipe é extremamente técnica e profissional.",
-    author: "Mariana Costa",
-    role: "Head de Dados",
-    company: "E-commerce Leader",
-    initials: "MC"
+    name: "Lisa Reynolds",
+    role: "Fintech Global",
+    text: "A automação da exdot transformou completamente nosso fluxo de trabalho."
   },
   {
-    quote: "Migrar para o Snowflake com a exdot foi a melhor decisão que tomamos. Escalabilidade e performance incomparáveis.",
-    author: "André Santos",
-    role: "CTO",
-    company: "SaaS Tech",
-    initials: "AS"
+    name: "Michael Patel",
+    role: "Health Group",
+    text: "Criamos um sistema poderoso com exdot. Simplesmente o melhor."
+  },
+  {
+    name: "Emily Chen",
+    role: "Bright Corp",
+    text: "Suporte ao cliente incrível e uptime fantástico. Recomendo."
   }
 ];
 
 export function Testimonials() {
   return (
-    <section className="py-24 bg-background relative" id="cases">
+    <section className="py-24 bg-black border-t border-white/5" id="cases">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-6">
-            O que nossos clientes dizem
-          </h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {testimonials.map((t, index) => (
             <motion.div
               key={index}
@@ -45,25 +38,22 @@ export function Testimonials() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="h-full bg-white/5 border-none hover:bg-white/10 transition-colors">
-                <CardContent className="p-8 relative">
-                  <Quote className="absolute top-6 right-6 w-8 h-8 text-primary/20" />
-                  
-                  <p className="text-lg text-white/90 mb-8 leading-relaxed relative z-10">
-                    "{t.quote}"
-                  </p>
-                  
-                  <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary to-purple-600 flex items-center justify-center text-white font-bold text-sm">
-                      {t.initials}
-                    </div>
+              <Card className="bg-white/5 border-white/5 h-full">
+                <CardContent className="p-6">
+                  <div className="flex items-center gap-3 mb-4">
+                    <Avatar className="h-10 w-10 border border-white/10">
+                      <AvatarFallback className="bg-primary/20 text-white text-xs">
+                        {t.name.split(" ").map(n => n[0]).join("")}
+                      </AvatarFallback>
+                    </Avatar>
                     <div>
-                      <div className="font-bold text-white">{t.author}</div>
-                      <div className="text-sm text-muted-foreground">
-                        {t.role}, {t.company}
-                      </div>
+                      <p className="text-sm font-bold text-white">{t.name}</p>
+                      <p className="text-xs text-muted-foreground">{t.role}</p>
                     </div>
                   </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    "{t.text}"
+                  </p>
                 </CardContent>
               </Card>
             </motion.div>
