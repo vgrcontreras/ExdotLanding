@@ -24,10 +24,7 @@ export function Hero() {
             transition={{ duration: 0.5 }}
             className="text-5xl md:text-7xl lg:text-8xl font-bold font-display tracking-tight leading-none text-foreground mb-6"
           >
-            Inteligência Poderosa, <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
-              Decisões Mais Sábias
-            </span>
+            Aceleramos o crescimento da sua empresa com dados
           </motion.h1>
 
           <motion.p
