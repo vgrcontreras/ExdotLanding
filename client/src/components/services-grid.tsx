@@ -11,11 +11,11 @@ const solutions = [
 
 export function Services() {
   return (
-    <section className="py-24 bg-black" id="servicos">
+    <section className="py-24 bg-background" id="servicos">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">Soluções</span>
-          <h2 className="text-3xl md:text-4xl font-bold font-display text-white">
+          <h2 className="text-3xl md:text-4xl font-bold font-display text-foreground">
             Descubra as Soluções para seu Trabalho
           </h2>
         </div>
@@ -29,14 +29,14 @@ export function Services() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="bg-card/10 border-white/10 hover:border-white/20 transition-all duration-300 group h-64 flex flex-col justify-end p-2">
+              <Card className="bg-card border-border hover:border-primary/30 transition-all duration-300 group h-64 flex flex-col justify-end p-2 shadow-sm hover:shadow-md">
                 <CardContent className="p-6 relative h-full flex flex-col justify-end">
                   <div className="absolute top-6 right-6 opacity-50 group-hover:opacity-100 transition-opacity">
-                    <ArrowUpRight className="w-5 h-5 text-white" />
+                    <ArrowUpRight className="w-5 h-5 text-muted-foreground group-hover:text-primary" />
                   </div>
                   
                   <span className="text-xs text-muted-foreground mb-2 block">Solução</span>
-                  <h3 className="text-2xl font-display font-medium text-white group-hover:text-primary transition-colors">
+                  <h3 className="text-2xl font-display font-medium text-foreground group-hover:text-primary transition-colors">
                     {solution.title}
                   </h3>
                 </CardContent>

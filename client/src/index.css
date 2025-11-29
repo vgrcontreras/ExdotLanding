@@ -33,8 +33,41 @@
   --font-display: "Space Grotesk", sans-serif;
 }
 
-/* Dark Theme - Adjusted for Deep Black/Purple Vibe */
+/* Light Theme (Default) */
 :root {
+  --background: 0 0% 100%; /* White */
+  --foreground: 240 10% 3.9%;
+  
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 3.9%;
+  
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 10% 3.9%;
+  
+  --primary: 265 89% 66%; /* Vivid Purple */
+  --primary-foreground: 0 0% 98%;
+  
+  --secondary: 190 90% 40%; /* Darker Cyan for Light Mode Contrast */
+  --secondary-foreground: 0 0% 98%;
+  
+  --muted: 240 4.8% 95.9%;
+  --muted-foreground: 240 3.8% 46.1%;
+  
+  --accent: 240 4.8% 95.9%;
+  --accent-foreground: 240 5.9% 10%;
+  
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+  
+  --border: 240 5.9% 90%;
+  --input: 240 5.9% 90%;
+  --ring: 265 89% 66%;
+  
+  --radius: 0.5rem;
+}
+
+/* Dark Theme */
+.dark {
   --background: 0 0% 0%; /* Pure Black */
   --foreground: 210 40% 98%;
   
@@ -62,8 +95,6 @@
   --border: 260 20% 10%;
   --input: 260 20% 10%;
   --ring: 265 89% 66%;
-  
-  --radius: 0.5rem;
 }
 
 @layer base {
@@ -71,8 +102,7 @@
     @apply border-border;
   }
   body {
-    @apply font-sans antialiased bg-background text-foreground;
-    background-color: #000;
+    @apply font-sans antialiased bg-background text-foreground transition-colors duration-300;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-display tracking-tight;

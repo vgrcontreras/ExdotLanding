@@ -27,7 +27,7 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="py-24 bg-black border-t border-white/5" id="cases">
+    <section className="py-24 bg-background border-t border-border" id="cases">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {testimonials.map((t, index) => (
@@ -38,16 +38,16 @@ export function Testimonials() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
             >
-              <Card className="bg-white/5 border-white/5 h-full">
+              <Card className="bg-card border-border h-full hover:shadow-md transition-all">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <Avatar className="h-10 w-10 border border-white/10">
-                      <AvatarFallback className="bg-primary/20 text-white text-xs">
+                    <Avatar className="h-10 w-10 border border-border">
+                      <AvatarFallback className="bg-primary/10 text-primary text-xs font-bold">
                         {t.name.split(" ").map(n => n[0]).join("")}
                       </AvatarFallback>
                     </Avatar>
                     <div>
-                      <p className="text-sm font-bold text-white">{t.name}</p>
+                      <p className="text-sm font-bold text-foreground">{t.name}</p>
                       <p className="text-xs text-muted-foreground">{t.role}</p>
                     </div>
                   </div>

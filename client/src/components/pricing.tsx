@@ -32,10 +32,10 @@ const plans = [
 
 export function Pricing() {
   return (
-    <section className="py-24 bg-black" id="precos">
+    <section className="py-24 bg-background" id="precos">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold font-display text-foreground mb-4">
             Escolha o Melhor Plano
           </h2>
           <p className="text-muted-foreground">
@@ -47,20 +47,22 @@ export function Pricing() {
           {plans.map((plan, index) => (
             <Card 
               key={index} 
-              className={`bg-card/30 border-white/10 flex flex-col ${
-                plan.highlight ? "border-primary/50 shadow-lg shadow-primary/10 relative overflow-hidden" : ""
+              className={`flex flex-col transition-all duration-300 ${
+                plan.highlight 
+                  ? "bg-card border-primary/50 shadow-lg shadow-primary/10 relative overflow-hidden scale-105" 
+                  : "bg-card/50 border-border hover:border-primary/20"
               }`}
             >
               {plan.highlight && (
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-purple-400 to-secondary" />
               )}
               <CardHeader>
-                <CardTitle className="text-xl font-medium text-white mb-2">{plan.name}</CardTitle>
-                <CardDescription>{plan.description}</CardDescription>
+                <CardTitle className="text-xl font-medium text-foreground mb-2">{plan.name}</CardTitle>
+                <CardDescription className="text-muted-foreground">{plan.description}</CardDescription>
               </CardHeader>
               <CardContent className="flex-1">
                 <div className="mb-6">
-                  <span className="text-4xl font-bold text-white">{plan.price}</span>
+                  <span className="text-4xl font-bold text-foreground">{plan.price}</span>
                   {plan.period && <span className="text-muted-foreground">{plan.period}</span>}
                 </div>
                 <ul className="space-y-3">
@@ -76,8 +78,8 @@ export function Pricing() {
                 <Button 
                   className={`w-full ${
                     plan.highlight 
-                      ? "bg-primary hover:bg-primary/90 text-white" 
-                      : "bg-white/10 hover:bg-white/20 text-white border-0"
+                      ? "bg-primary hover:bg-primary/90 text-primary-foreground" 
+                      : "bg-secondary/10 hover:bg-secondary/20 text-foreground border-0"
                   }`}
                 >
                   {plan.buttonText}
