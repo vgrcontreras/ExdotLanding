@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import orbImage from "@assets/generated_images/glowing_purple_sphere_orb_in_black_void.png";
+import orbImage from "@assets/generated_images/glowing_purple_sphere_orb_in_white_void.png";
 
 const stats = [
   {
@@ -26,17 +26,17 @@ const stats = [
 
 export function WhyUs() {
   return (
-    <section className="py-32 bg-black relative overflow-hidden" id="sobre">
+    <section className="py-32 bg-background relative overflow-hidden" id="sobre">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         
         {/* Glowing Orb Centerpiece */}
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] opacity-40 pointer-events-none">
-           <img src={orbImage} alt="" className="w-full h-full object-contain animate-pulse-slow" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] opacity-60 pointer-events-none">
+           <img src={orbImage} alt="" className="w-full h-full object-contain animate-pulse-slow mix-blend-multiply" />
         </div>
 
         <div className="max-w-3xl mx-auto text-center mb-24 relative z-20">
-          <h2 className="text-3xl md:text-5xl font-bold font-display text-white mb-6 leading-tight">
-            A exdot foi criada para preencher a lacuna entre tecnologia complexa e <span className="text-purple-400">resultados reais</span>.
+          <h2 className="text-3xl md:text-5xl font-bold font-display text-foreground mb-6 leading-tight">
+            A exdot foi criada para preencher a lacuna entre tecnologia complexa e <span className="text-primary">resultados reais</span>.
           </h2>
         </div>
 
@@ -50,10 +50,10 @@ export function WhyUs() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="text-left"
             >
-              <div className="text-5xl font-bold text-white mb-2 font-display tracking-tight">
+              <div className="text-5xl font-bold text-foreground mb-2 font-display tracking-tight">
                 {stat.value}
               </div>
-              <h3 className="text-lg font-semibold text-white/90 mb-2">
+              <h3 className="text-lg font-semibold text-foreground/90 mb-2">
                 {stat.label}
               </h3>
               <p className="text-sm text-muted-foreground leading-relaxed max-w-[200px]">

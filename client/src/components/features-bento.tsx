@@ -8,37 +8,37 @@ const features = [
     description: "Líder de mercado em precisão e adaptabilidade.",
     icon: Bot,
     colSpan: "md:col-span-2",
-    bgClass: "bg-gradient-to-br from-card/50 to-primary/5"
+    bgClass: "bg-gradient-to-br from-muted to-primary/5"
   },
   {
     title: "Performance Ultra-rápida",
     description: "Processe dados e gere resultados em segundos.",
     icon: Zap,
     colSpan: "md:col-span-1",
-    bgClass: "bg-card/30"
+    bgClass: "bg-muted/50"
   },
   {
     title: "Automação Contínua",
     description: "Reduza trabalho manual com agentes inteligentes.",
     icon: Cpu,
     colSpan: "md:col-span-1",
-    bgClass: "bg-card/30"
+    bgClass: "bg-muted/50"
   },
   {
     title: "Segurança Enterprise",
     description: "Detecção de ameaças baseada em IA e proteção de dados.",
     icon: ShieldCheck,
     colSpan: "md:col-span-2",
-    bgClass: "bg-gradient-to-tl from-card/50 to-purple-900/10"
+    bgClass: "bg-gradient-to-tl from-muted to-purple-100"
   }
 ];
 
 export function FeaturesBento() {
   return (
-    <section className="py-24 bg-black">
+    <section className="py-24 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold font-display text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold font-display text-foreground mb-4">
             exdot não é apenas outra plataforma
           </h2>
           <p className="text-muted-foreground">
@@ -56,13 +56,13 @@ export function FeaturesBento() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className={feature.colSpan}
             >
-              <Card className={`h-full border-white/10 hover:border-primary/30 transition-colors overflow-hidden group ${feature.bgClass}`}>
+              <Card className={`h-full border-border hover:border-primary/30 transition-colors overflow-hidden group ${feature.bgClass}`}>
                 <CardContent className="p-8 flex flex-col h-full justify-between">
-                  <div className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 text-primary">
+                  <div className="w-12 h-12 rounded-full bg-white border border-border flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300 text-primary shadow-sm">
                     <feature.icon className="w-6 h-6" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
+                    <h3 className="text-xl font-bold text-foreground mb-2">{feature.title}</h3>
                     <p className="text-muted-foreground text-sm">{feature.description}</p>
                   </div>
                 </CardContent>
