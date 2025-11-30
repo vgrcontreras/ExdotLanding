@@ -5,6 +5,7 @@ import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { PrimaryGlowBackground } from "@/components/ui/background-components";
 import { Typewriter } from "@/components/ui/typewriter";
+import { GlassBadge } from "@/components/ui/glass-badge";
 
 interface Hero7Props {
   description?: string;
@@ -60,6 +61,14 @@ const Hero7 = ({
 
       <div className="container text-center relative z-10">
         <div className="mx-auto flex max-w-screen-lg flex-col gap-6">
+          {/* Glass Badge */}
+          <div className="flex justify-center mb-4">
+            <GlassBadge
+              text="Confiado por empresas inovadoras"
+              icons={["✨"]}
+            />
+          </div>
+
           <h1 className="text-3xl font-extrabold lg:text-6xl">
             <span>Aceleramos o crescimento da sua empresa com </span>
             <Typewriter
