@@ -1,49 +1,62 @@
 import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
-import { ArrowUpRight } from "lucide-react";
+import { Feature197 } from "@/components/ui/accordion-feature-section";
+import { AnimatedBadge } from "@/components/ui/animated-badge";
 
 const solutions = [
-  { title: "Automação", icon: "⚡" },
-  { title: "Analytics", icon: "📊" },
-  { title: "Segurança", icon: "🛡️" },
-  { title: "Produtividade", icon: "🚀" }
+  {
+    id: 1,
+    title: "Automação",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+    description:
+      "Automatize processos repetitivos e libere sua equipe para focar no que realmente importa. Nossas soluções de automação reduzem erros manuais, aumentam a eficiência operacional e permitem que sua empresa escale sem aumentar proporcionalmente os custos.",
+  },
+  {
+    id: 2,
+    title: "Analytics",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+    description:
+      "Transforme dados em insights acionáveis. Nossa plataforma de analytics oferece visualizações intuitivas, relatórios em tempo real e análises preditivas que ajudam sua empresa a tomar decisões baseadas em dados, não em suposições.",
+  },
+  {
+    id: 3,
+    title: "Segurança",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+    description:
+      "Proteja seus dados e sistemas com segurança de nível empresarial. Implementamos camadas de proteção, monitoramento contínuo e protocolos de resposta a incidentes para garantir que seus ativos digitais estejam sempre seguros.",
+  },
+  {
+    id: 4,
+    title: "Produtividade",
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+    description:
+      "Aumente a produtividade da sua equipe com ferramentas e processos otimizados. Nossas soluções integram sistemas, eliminam gargalos e criam fluxos de trabalho eficientes que permitem que sua equipe faça mais em menos tempo.",
+  },
 ];
 
 export function Services() {
   return (
     <section className="py-24 bg-background border-b border-border" id="servicos">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">Soluções</span>
-          <h2 className="text-3xl md:text-4xl font-bold font-display text-foreground">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center justify-center max-w-4xl mx-auto mb-16"
+        >
+          <div className="flex justify-center mb-8">
+            <AnimatedBadge
+              text="Soluções"
+              color="#4747F3"
+            />
+          </div>
+
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter mt-5 font-display text-foreground text-center">
             Descubra as Soluções para seu Trabalho
           </h2>
-        </div>
+        </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {solutions.map((solution, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-            >
-              <Card className="bg-muted/50 border-border hover:border-primary/30 transition-all duration-300 group h-64 flex flex-col justify-end p-2">
-                <CardContent className="p-6 relative h-full flex flex-col justify-end">
-                  <div className="absolute top-6 right-6 opacity-50 group-hover:opacity-100 transition-opacity">
-                    <ArrowUpRight className="w-5 h-5 text-foreground" />
-                  </div>
-                  
-                  <span className="text-xs text-muted-foreground mb-2 block">Solução</span>
-                  <h3 className="text-2xl font-display font-medium text-foreground group-hover:text-primary transition-colors">
-                    {solution.title}
-                  </h3>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
+        <Feature197 features={solutions} />
       </div>
     </section>
   );
