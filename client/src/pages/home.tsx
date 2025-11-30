@@ -15,7 +15,7 @@ export default function Home() {
         <Hero7
           description="Sabemos que cada empresa funciona do seu jeito. Por isso estruturamos os seus dados e criamos soluções de acordo com sua realidade."
           button={{
-            text: "Comece Agora",
+            text: "Quero organizar meus dados",
             url: "#"
           }}
           reviews={{
