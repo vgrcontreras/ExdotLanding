@@ -3,7 +3,7 @@ import React from "react";
 
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { YellowGlowBackground } from "@/components/ui/background-components";
+import { PrimaryGlowBackground } from "@/components/ui/background-components";
 import { Typewriter } from "@/components/ui/typewriter";
 
 interface Hero7Props {
@@ -55,8 +55,8 @@ const Hero7 = ({
 }: Hero7Props) => {
   return (
     <section className="relative min-h-screen w-full flex items-center justify-center py-32 overflow-hidden bg-white">
-      {/* Yellow Glow Background Effect */}
-      <YellowGlowBackground />
+      {/* Primary Glow Background Effect */}
+      <PrimaryGlowBackground />
 
       <div className="container text-center relative z-10">
         <div className="mx-auto flex max-w-screen-lg flex-col gap-6">

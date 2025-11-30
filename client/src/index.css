@@ -44,24 +44,24 @@
   --popover: 0 0% 100%;
   --popover-foreground: 260 30% 10%;
   
-  --primary: 265 89% 66%; /* Vivid Purple - Keeps brand identity */
+  --primary: 240 88% 61%; /* exdot Brand Purple/Blue #4747F3 */
   --primary-foreground: 0 0% 100%;
-  
+
   --secondary: 190 90% 45%; /* Cyan - Slightly darker for contrast on white */
   --secondary-foreground: 0 0% 100%;
-  
+
   --muted: 260 10% 96%; /* Very light violet/gray */
   --muted-foreground: 260 10% 40%;
-  
+
   --accent: 260 10% 96%;
   --accent-foreground: 260 30% 10%;
-  
+
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 0 0% 98%;
-  
+
   --border: 260 10% 90%;
   --input: 260 10% 90%;
-  --ring: 265 89% 66%;
+  --ring: 240 88% 61%;
   
   --radius: 0.5rem;
 }
