@@ -13,7 +13,6 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero7
-          heading="Aceleramos o crescimento da sua empresa com dados"
           description="A exdot traz automação orientada por IA e inteligência de dados para ajudar seu negócio a prever, adaptar e escalar sem esforço."
           button={{
             text: "Comece Agora",

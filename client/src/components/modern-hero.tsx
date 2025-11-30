@@ -3,9 +3,10 @@ import React from "react";
 
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
+import { YellowGlowBackground } from "@/components/ui/background-components";
+import { Typewriter } from "@/components/ui/typewriter";
 
 interface Hero7Props {
-  heading?: string;
   description?: string;
   button?: {
     text: string;
@@ -21,7 +22,6 @@ interface Hero7Props {
 }
 
 const Hero7 = ({
-  heading = "A Collection of Components Built With Shadcn & Tailwind",
   description = "Finely crafted components built with React, Tailwind and Shadcn UI. Developers can copy and paste these blocks directly into their project.",
   button = {
     text: "Discover all components",
@@ -54,10 +54,23 @@ const Hero7 = ({
   },
 }: Hero7Props) => {
   return (
-    <section className="min-h-screen w-full flex items-center justify-center py-32">
-      <div className="container text-center">
+    <section className="relative min-h-screen w-full flex items-center justify-center py-32 overflow-hidden bg-white">
+      {/* Yellow Glow Background Effect */}
+      <YellowGlowBackground />
+
+      <div className="container text-center relative z-10">
         <div className="mx-auto flex max-w-screen-lg flex-col gap-6">
-          <h1 className="text-3xl font-extrabold lg:text-6xl">{heading}</h1>
+          <h1 className="text-3xl font-extrabold lg:text-6xl">
+            <span>Aceleramos o crescimento da sua empresa com </span>
+            <Typewriter
+              text={["dados", "automações", "I.A."]}
+              speed={70}
+              className="text-primary"
+              waitTime={2000}
+              deleteSpeed={40}
+              cursorChar={"_"}
+            />
+          </h1>
           <p className="text-balance text-muted-foreground lg:text-lg">
             {description}
           </p>
