@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { AnimatedBadge } from "@/components/ui/animated-badge";
 
 const stats = [
   {
@@ -27,6 +28,13 @@ export function WhyUs() {
   return (
     <section className="py-32 bg-background relative overflow-hidden" id="sobre">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Animated Badge */}
+        <div className="flex justify-center mb-8">
+          <AnimatedBadge
+            text="Porque Exdot"
+            color="#4747F3"
+          />
+        </div>
 
         <div className="max-w-3xl mx-auto text-center mb-24 relative z-20">
           <h2 className="text-3xl md:text-5xl font-bold font-display text-foreground mb-6 leading-tight">
