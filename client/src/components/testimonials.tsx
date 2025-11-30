@@ -1,146 +1,99 @@
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import { Card, CardContent } from '@/components/ui/card';
-import { Marquee } from '@/components/ui/3d-testimonials';
+import React from "react";
+import { motion } from "framer-motion";
+import { TestimonialsColumn } from "@/components/ui/testimonials-columns-1";
+import { AnimatedBadge } from "@/components/ui/animated-badge";
 
 const testimonials = [
   {
-    name: 'Maria Silva',
-    username: '@maria',
-    body: 'A exdot transformou completamente nossa análise de dados!',
-    img: 'https://randomuser.me/api/portraits/women/32.jpg',
-    country: '🇧🇷 Brasil',
+    text: "A exdot revolucionou nossas operações, otimizando finanças e análise de dados. A plataforma baseada em nuvem nos mantém produtivos, mesmo remotamente.",
+    image: "https://randomuser.me/api/portraits/women/32.jpg",
+    name: "Maria Silva",
+    role: "Gerente de Operações",
   },
   {
-    name: 'João Santos',
-    username: '@joao',
-    body: 'Automação poderosa que reduziu nossos custos em 40%.',
-    img: 'https://randomuser.me/api/portraits/men/51.jpg',
-    country: '🇧🇷 Brasil',
+    text: "Implementar a exdot foi rápido e suave. A interface customizável e amigável tornou o treinamento da equipe sem esforço.",
+    image: "https://randomuser.me/api/portraits/men/51.jpg",
+    name: "João Santos",
+    role: "Gerente de TI",
   },
   {
-    name: 'Ana Costa',
-    username: '@ana',
-    body: 'Decisões 75% mais rápidas com insights instantâneos!',
-    img: 'https://randomuser.me/api/portraits/women/68.jpg',
-    country: '🇵🇹 Portugal',
+    text: "A equipe de suporte é excepcional, nos guiando através da configuração e fornecendo assistência contínua, garantindo nossa satisfação.",
+    image: "https://randomuser.me/api/portraits/women/68.jpg",
+    name: "Ana Costa",
+    role: "Líder de Suporte",
   },
   {
-    name: 'Pedro Oliveira',
-    username: '@pedro',
-    body: 'A melhor solução de IA para estruturação de dados.',
-    img: 'https://randomuser.me/api/portraits/men/33.jpg',
-    country: '🇧🇷 Brasil',
+    text: "A integração perfeita da exdot melhorou nossas operações de negócio e eficiência. Altamente recomendado pela interface intuitiva.",
+    image: "https://randomuser.me/api/portraits/men/33.jpg",
+    name: "Pedro Oliveira",
+    role: "CEO",
   },
   {
-    name: 'Carla Mendes',
-    username: '@carla',
-    body: 'Suporte incrível e resultados reais desde o primeiro dia.',
-    img: 'https://randomuser.me/api/portraits/women/45.jpg',
-    country: '🇧🇷 Brasil',
+    text: "Seus recursos robustos e suporte rápido transformaram nosso fluxo de trabalho, nos tornando significativamente mais eficientes.",
+    image: "https://randomuser.me/api/portraits/women/45.jpg",
+    name: "Carla Mendes",
+    role: "Gerente de Projetos",
   },
   {
-    name: 'Lucas Ferreira',
-    username: '@lucas',
-    body: 'Sistema robusto que nunca falha. 99.9% de uptime!',
-    img: 'https://randomuser.me/api/portraits/men/22.jpg',
-    country: '🇧🇷 Brasil',
+    text: "A implementação suave superou as expectativas. Otimizou processos, melhorando o desempenho geral do negócio.",
+    image: "https://randomuser.me/api/portraits/women/53.jpg",
+    name: "Juliana Rocha",
+    role: "Analista de Negócios",
   },
   {
-    name: 'Juliana Rocha',
-    username: '@juliana',
-    body: 'Automatizamos 10M+ tarefas e aumentamos a eficiência.',
-    img: 'https://randomuser.me/api/portraits/women/53.jpg',
-    country: '🇧🇷 Brasil',
+    text: "Nossas funções de negócio melhoraram com um design amigável e feedback positivo dos clientes.",
+    image: "https://randomuser.me/api/portraits/men/22.jpg",
+    name: "Lucas Ferreira",
+    role: "Diretor de Marketing",
   },
   {
-    name: 'Ricardo Lima',
-    username: '@ricardo',
-    body: 'A exdot entende que cada empresa é única. Perfeito!',
-    img: 'https://randomuser.me/api/portraits/men/61.jpg',
-    country: '🇵🇹 Portugal',
+    text: "Eles entregaram uma solução que superou expectativas, entendendo nossas necessidades e aprimorando nossas operações.",
+    image: "https://randomuser.me/api/portraits/men/61.jpg",
+    name: "Ricardo Lima",
+    role: "Gerente de Vendas",
   },
   {
-    name: 'Fernanda Alves',
-    username: '@fernanda',
-    body: 'Transformou nosso workflow com IA e dados estruturados.',
-    img: 'https://randomuser.me/api/portraits/women/85.jpg',
-    country: '🇧🇷 Brasil',
+    text: "Usando a exdot, nossa presença online e conversões melhoraram significativamente, impulsionando o desempenho do negócio.",
+    image: "https://randomuser.me/api/portraits/women/85.jpg",
+    name: "Fernanda Alves",
+    role: "Gerente de E-commerce",
   },
 ];
 
-function TestimonialCard({ img, name, username, body, country }: (typeof testimonials)[number]) {
-  return (
-    <Card className="w-80">
-      <CardContent className="p-6">
-        <div className="flex items-center gap-2.5 mb-4">
-          <Avatar className="size-9">
-            <AvatarImage src={img} alt={name} />
-            <AvatarFallback>{name[0]}</AvatarFallback>
-          </Avatar>
-          <div className="flex flex-col">
-            <figcaption className="text-sm font-medium text-foreground flex items-center gap-1">
-              {name} <span className="text-xs">{country}</span>
-            </figcaption>
-            <p className="text-xs font-medium text-muted-foreground">{username}</p>
-          </div>
-        </div>
-        <blockquote className="text-sm text-muted-foreground leading-relaxed">"{body}"</blockquote>
-      </CardContent>
-    </Card>
-  );
-}
+const firstColumn = testimonials.slice(0, 3);
+const secondColumn = testimonials.slice(3, 6);
+const thirdColumn = testimonials.slice(6, 9);
 
 export function Testimonials() {
   return (
-    <section className="py-24 bg-background relative overflow-hidden" id="cases">
+    <section className="py-24 bg-background relative overflow-hidden border-b border-border" id="cases">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold font-display text-foreground mb-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center justify-center max-w-4xl mx-auto"
+        >
+          <div className="flex justify-center mb-8">
+            <AnimatedBadge
+              text="Depoimentos"
+              color="#4747F3"
+            />
+          </div>
+
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter mt-5 font-display text-foreground text-center">
             O que nossos clientes dizem
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Empresas que já transformaram seus dados com a exdot
+          <p className="text-center mt-5 opacity-75 text-muted-foreground max-w-xl">
+            Veja o que nossos clientes têm a dizer sobre nós.
           </p>
-        </div>
+        </motion.div>
 
-        <div className="border border-border rounded-3xl relative flex h-[500px] w-full max-w-[1000px] mx-auto flex-row items-center justify-center overflow-hidden [perspective:300px] bg-gradient-to-br from-background to-muted/20">
-          <div
-            className="flex flex-row items-center gap-4"
-            style={{
-              transform:
-                'translateX(-50px) translateY(0px) translateZ(-50px) rotateX(15deg) rotateY(-8deg) rotateZ(10deg)',
-            }}
-          >
-            {/* Vertical Marquee (downwards) */}
-            <Marquee vertical pauseOnHover repeat={3} className="[--duration:40s]">
-              {testimonials.map((review) => (
-                <TestimonialCard key={review.username} {...review} />
-              ))}
-            </Marquee>
-            {/* Vertical Marquee (upwards) */}
-            <Marquee vertical pauseOnHover reverse repeat={3} className="[--duration:40s]">
-              {testimonials.map((review) => (
-                <TestimonialCard key={review.username} {...review} />
-              ))}
-            </Marquee>
-            {/* Vertical Marquee (downwards) */}
-            <Marquee vertical pauseOnHover repeat={3} className="[--duration:40s]">
-              {testimonials.map((review) => (
-                <TestimonialCard key={review.username} {...review} />
-              ))}
-            </Marquee>
-            {/* Vertical Marquee (upwards) */}
-            <Marquee vertical pauseOnHover reverse repeat={3} className="[--duration:40s]">
-              {testimonials.map((review) => (
-                <TestimonialCard key={review.username} {...review} />
-              ))}
-            </Marquee>
-          </div>
-          {/* Gradient overlays */}
-          <div className="pointer-events-none absolute inset-x-0 top-0 h-1/4 bg-gradient-to-b from-background"></div>
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-1/4 bg-gradient-to-t from-background"></div>
-          <div className="pointer-events-none absolute inset-y-0 left-0 w-1/4 bg-gradient-to-r from-background"></div>
-          <div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-gradient-to-l from-background"></div>
+        <div className="flex justify-center gap-6 mt-10 [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)] max-h-[740px] overflow-hidden">
+          <TestimonialsColumn testimonials={firstColumn} duration={15} />
+          <TestimonialsColumn testimonials={secondColumn} className="hidden md:block" duration={19} />
+          <TestimonialsColumn testimonials={thirdColumn} className="hidden lg:block" duration={17} />
         </div>
       </div>
     </section>

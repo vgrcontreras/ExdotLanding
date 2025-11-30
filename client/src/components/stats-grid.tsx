@@ -26,7 +26,7 @@ const stats = [
 
 export function WhyUs() {
   return (
-    <section className="py-32 bg-background relative overflow-hidden" id="sobre">
+    <section className="py-32 bg-background relative overflow-hidden border-b border-border" id="sobre">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Animated Badge */}
         <div className="flex justify-center mb-8">

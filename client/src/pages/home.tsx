@@ -2,7 +2,6 @@ import { Navbar } from "@/components/navbar";
 import { Hero7 } from "@/components/modern-hero";
 import { WhyUs } from "@/components/stats-grid";
 import { Services } from "@/components/services-grid";
-import { FeaturesBento } from "@/components/features-bento";
 import { Testimonials } from "@/components/testimonials";
 import { CTA } from "@/components/cta-section";
 import { Footer } from "@/components/footer";
@@ -46,7 +45,6 @@ export default function Home() {
         />
         <WhyUs />
         <Services />
-        <FeaturesBento />
         <Testimonials />
         <CTA />
       </main>

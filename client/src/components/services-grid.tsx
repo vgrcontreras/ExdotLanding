@@ -11,7 +11,7 @@ const solutions = [
 
 export function Services() {
   return (
-    <section className="py-24 bg-background" id="servicos">
+    <section className="py-24 bg-background border-b border-border" id="servicos">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider mb-4 block">Soluções</span>
