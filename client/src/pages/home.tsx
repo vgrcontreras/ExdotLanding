@@ -4,7 +4,7 @@ import { Features } from "@/components/ui/features-4";
 import { Services } from "@/components/services-grid";
 import { ProcessSection } from "@/components/process-section";
 import { Hero195 } from "@/components/ui/hero-195";
-import { Testimonials } from "@/components/testimonials";
+import { TestimonialsMarquee } from "@/components/testimonials-marquee";
 import { FAQSection } from "@/components/faq-section";
 import { CTA } from "@/components/cta-section";
 import { Footer } from "@/components/footer";
@@ -50,7 +50,7 @@ export default function Home() {
         <Services />
         <ProcessSection />
         <Hero195 />
-        <Testimonials />
+        <TestimonialsMarquee />
         <FAQSection />
         <CTA />
       </main>
