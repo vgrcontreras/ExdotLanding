@@ -2,6 +2,7 @@
 
 import { useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
+import { Button } from "@/components/ui/button"
 
 const PROCESS_PHASES = [
   {
@@ -103,24 +104,29 @@ export function ProcessSection() {
         {/* Container sticky que mantém tudo visível */}
         <div className="sticky top-0 h-screen overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl h-full flex items-center">
-            <div className="grid md:grid-cols-2 md:gap-8 xl:gap-12 w-full">
+            <div className="grid md:grid-cols-2 md:gap-8 xl:gap-12 w-full items-start pt-20 md:pt-0">
               {/* Coluna esquerda - Texto */}
-              <div className="self-center">
-                <h2 className="mb-6 text-4xl font-bold tracking-tight">
+              <div className="space-y-6">
+                <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight leading-tight">
                   Planejando a jornada de{" "}
                   <span className="text-primary">transformação dos seus dados</span>
                 </h2>
-                <p className="max-w-prose text-sm text-muted-foreground">
+                <p className="max-w-prose text-base md:text-lg text-muted-foreground leading-relaxed">
                   Nossa jornada começa com uma imersão profunda na sua visão. Na fase de Descoberta,
                   engajamos em conversas significativas para compreender sua identidade de marca,
                   objetivos e a essência que você deseja transmitir. Esta fase estabelece as bases
                   para tudo que se segue.
                 </p>
+                <div className="pt-2">
+                  <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-10 h-14 rounded-full text-lg font-semibold shadow-[0_10px_30px_rgba(139,92,246,0.2)]">
+                    Começar Transformação
+                  </Button>
+                </div>
               </div>
 
               {/* Coluna direita - Cards empilháveis */}
-              <div 
-                className="relative self-center"
+              <div
+                className="relative"
                 style={{ height: stackedHeight }}
               >
                 {PROCESS_PHASES.map((phase, index) => (
