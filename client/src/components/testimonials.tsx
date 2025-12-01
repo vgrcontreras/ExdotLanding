@@ -82,7 +82,7 @@ export function Testimonials() {
             />
           </div>
 
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter mt-5 font-display text-foreground text-center">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mt-5 font-display text-foreground text-center">
             O que nossos clientes dizem
           </h2>
           <p className="text-center mt-5 opacity-75 text-muted-foreground max-w-xl">

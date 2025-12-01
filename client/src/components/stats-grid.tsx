@@ -26,7 +26,7 @@ const stats = [
 
 export function WhyUs() {
   return (
-    <section className="py-32 bg-background relative overflow-hidden border-b border-border" id="sobre">
+    <section className="py-24 bg-background relative overflow-hidden border-b border-border" id="sobre">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Animated Badge */}
         <div className="flex justify-center mb-8">
@@ -36,7 +36,7 @@ export function WhyUs() {
           />
         </div>
 
-        <div className="max-w-3xl mx-auto text-center mb-24 relative z-20">
+        <div className="max-w-3xl mx-auto text-center mb-16 relative z-20">
           <h2 className="text-3xl md:text-5xl font-bold font-display text-foreground mb-6 leading-tight">
             A exdot foi criada para preencher a lacuna entre tecnologia complexa e <span className="text-primary">resultados reais</span>.
           </h2>

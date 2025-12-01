@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Feature197 } from "@/components/ui/accordion-feature-section";
+import { AnimatedBadge } from "@/components/ui/animated-badge";
 
 const solutions = [
   {
@@ -35,7 +36,7 @@ const solutions = [
 export function Services() {
   return (
     <section className="py-24 bg-background border-b border-border" id="servicos">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -43,7 +44,14 @@ export function Services() {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center max-w-4xl mx-auto mb-16"
         >
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter font-display text-foreground text-center">
+          <div className="flex justify-center mb-8">
+            <AnimatedBadge
+              text="Soluções"
+              color="#4747F3"
+            />
+          </div>
+
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight font-display text-foreground text-center">
             Descubra as Soluções para seu Trabalho
           </h2>
         </motion.div>
