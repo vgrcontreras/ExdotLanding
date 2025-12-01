@@ -103,8 +103,8 @@ export function ProcessSection() {
       >
         {/* Container sticky que mantém tudo visível */}
         <div className="sticky top-0 h-screen overflow-hidden">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl h-full flex items-center">
-            <div className="grid md:grid-cols-2 md:gap-8 xl:gap-12 w-full items-start pt-20 md:pt-0">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl h-full flex items-center pt-20">
+            <div className="grid md:grid-cols-2 md:gap-8 xl:gap-12 w-full items-start">
               {/* Coluna esquerda - Texto */}
               <div className="space-y-6">
                 <h2 className="text-4xl md:text-5xl lg:text-5xl font-bold tracking-tight leading-tight">
