@@ -119,7 +119,7 @@ export function ProcessSection() {
                 </p>
                 <div className="pt-2">
                   <Button size="lg" className="bg-primary hover:bg-primary/90 text-white px-10 h-14 rounded-full text-lg font-semibold shadow-[0_10px_30px_rgba(139,92,246,0.2)]">
-                    Começar Transformação
+                    Agendar reunião
                   </Button>
                 </div>
               </div>
