@@ -4,11 +4,12 @@ import { cn } from "@/lib/utils"
 interface SafariMockupProps extends React.HTMLAttributes<HTMLDivElement> {
   url?: string
   src?: string
+  embedUrl?: string
   children?: React.ReactNode
 }
 
 export const SafariMockup = React.forwardRef<HTMLDivElement, SafariMockupProps>(
-  ({ className, url = "exdot.com.br/dashboard", src, children, ...props }, ref) => {
+  ({ className, url = "exdot.com.br/dashboard", src, embedUrl, children, ...props }, ref) => {
     return (
       <div
         ref={ref}
@@ -48,15 +49,32 @@ export const SafariMockup = React.forwardRef<HTMLDivElement, SafariMockupProps>(
         </div>
 
         {/* Browser Content */}
-        <div className="relative bg-background">
-          {src && (
+        <div className="relative bg-background overflow-hidden">
+          {embedUrl ? (
+            <div className="relative w-full h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
+              <iframe
+                src={embedUrl}
+                className="absolute top-0 left-0"
+                style={{
+                  transform: 'scale(1.25) translate(-10%, -1%)',
+                  width: '100%',
+                  height: '100%',
+                  transformOrigin: 'top left'
+                }}
+                frameBorder="0"
+                allowFullScreen
+                title="Power BI Dashboard"
+              />
+            </div>
+          ) : src ? (
             <img
               src={src}
               alt="Dashboard preview"
               className="w-full h-auto object-cover"
             />
+          ) : (
+            children
           )}
-          {children}
         </div>
       </div>
     )
