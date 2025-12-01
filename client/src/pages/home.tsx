@@ -1,8 +1,10 @@
 import { Navbar } from "@/components/navbar";
 import { Hero7 } from "@/components/modern-hero";
-import { WhyUs } from "@/components/stats-grid";
+import { Features } from "@/components/ui/features-4";
 import { Services } from "@/components/services-grid";
+import { ProcessSection } from "@/components/process-section";
 import { Testimonials } from "@/components/testimonials";
+import { FAQSection } from "@/components/faq-section";
 import { CTA } from "@/components/cta-section";
 import { Footer } from "@/components/footer";
 
@@ -43,9 +45,11 @@ export default function Home() {
             ],
           }}
         />
-        <WhyUs />
+        <Features />
         <Services />
+        <ProcessSection />
         <Testimonials />
+        <FAQSection />
         <CTA />
       </main>
       <Footer />
