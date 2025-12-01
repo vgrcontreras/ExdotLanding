@@ -3,6 +3,7 @@ import { Hero7 } from "@/components/modern-hero";
 import { Features } from "@/components/ui/features-4";
 import { Services } from "@/components/services-grid";
 import { ProcessSection } from "@/components/process-section";
+import { Hero195 } from "@/components/ui/hero-195";
 import { Testimonials } from "@/components/testimonials";
 import { FAQSection } from "@/components/faq-section";
 import { CTA } from "@/components/cta-section";
@@ -48,6 +49,7 @@ export default function Home() {
         <Features />
         <Services />
         <ProcessSection />
+        <Hero195 />
         <Testimonials />
         <FAQSection />
         <CTA />
