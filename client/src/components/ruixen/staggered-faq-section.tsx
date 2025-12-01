@@ -36,30 +36,39 @@ export default function StaggeredFAQSection({
   className,
   hideSupport = false,
 }: StaggeredFAQProps) {
+  const showSidebar = title || subtitle;
+
   return (
     <section className={cn("py-16 md:py-24", className)}>
       <div className="mx-auto max-w-5xl px-6">
-        <div className="grid gap-8 md:grid-cols-5 md:gap-12">
-          <div className="md:col-span-2">
-            <h2 className="text-foreground text-4xl font-semibold">{title}</h2>
-            <p className="text-muted-foreground mt-4 text-balance text-lg">
-              {subtitle}
-            </p>
-            {!hideSupport && (
-              <p className="text-muted-foreground mt-6 hidden md:block">
-                {supportText}{" "}
-                <a
-                  href={supportLink}
-                  className="text-primary font-medium hover:underline"
-                >
-                  {supportLinkText}
-                </a>{" "}
-                for assistance.
-              </p>
-            )}
-          </div>
+        <div className={cn(
+          "grid gap-8 md:gap-12",
+          showSidebar ? "md:grid-cols-5" : "md:grid-cols-1"
+        )}>
+          {showSidebar && (
+            <div className="md:col-span-2">
+              {title && <h2 className="text-foreground text-4xl font-semibold">{title}</h2>}
+              {subtitle && (
+                <p className="text-muted-foreground mt-4 text-balance text-lg">
+                  {subtitle}
+                </p>
+              )}
+              {!hideSupport && (
+                <p className="text-muted-foreground mt-6 hidden md:block">
+                  {supportText}{" "}
+                  <a
+                    href={supportLink}
+                    className="text-primary font-medium hover:underline"
+                  >
+                    {supportLinkText}
+                  </a>{" "}
+                  for assistance.
+                </p>
+              )}
+            </div>
+          )}
 
-          <div className="md:col-span-3">
+          <div className={cn(showSidebar ? "md:col-span-3" : "max-w-3xl mx-auto w-full")}>
             <Accordion type="single" collapsible>
               {faqItems.map((item) => (
                 <AccordionItem
@@ -78,7 +87,7 @@ export default function StaggeredFAQSection({
             </Accordion>
           </div>
 
-          {!hideSupport && (
+          {!hideSupport && showSidebar && (
             <p className="text-muted-foreground mt-6 md:hidden">
               {supportText}{" "}
               <a

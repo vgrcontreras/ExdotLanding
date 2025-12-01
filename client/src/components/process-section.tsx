@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Timeline } from "@/components/ui/timeline";
-import { AnimatedBadge } from "@/components/ui/animated-badge";
 
 export function ProcessSection() {
   const timelineData = [
@@ -93,14 +92,7 @@ export function ProcessSection() {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center max-w-4xl mx-auto mb-16"
         >
-          <div className="flex justify-center mb-8">
-            <AnimatedBadge
-              text="Nosso Processo"
-              color="#4747F3"
-            />
-          </div>
-
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter mt-5 font-display text-foreground text-center">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter font-display text-foreground text-center">
             Como Transformamos Seus Dados em Resultados
           </h2>
         </motion.div>

@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import StaggeredFAQSection from "@/components/ruixen/staggered-faq-section";
-import { AnimatedBadge } from "@/components/ui/animated-badge";
 
 export function FAQSection() {
   const faqItems = [
@@ -46,20 +45,18 @@ export function FAQSection() {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center max-w-4xl mx-auto mb-16"
         >
-          <div className="flex justify-center mb-8">
-            <AnimatedBadge
-              text="Perguntas Frequentes"
-              color="#4747F3"
-            />
-          </div>
-
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter mt-5 font-display text-foreground text-center">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter font-display text-foreground text-center">
             Tire suas dúvidas sobre nossos serviços
           </h2>
         </motion.div>
 
         <div className="relative justify-center">
-          <StaggeredFAQSection faqItems={faqItems} />
+          <StaggeredFAQSection
+            faqItems={faqItems}
+            hideSupport={true}
+            title=""
+            subtitle=""
+          />
         </div>
       </div>
     </section>

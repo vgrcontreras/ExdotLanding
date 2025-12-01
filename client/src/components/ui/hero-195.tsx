@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { BorderBeam } from "@/components/ui/border-beam";
-import { AnimatedBadge } from "@/components/ui/animated-badge";
 import { SafariMockup } from "@/components/ui/safari-mockup";
 
 export function Hero195() {
@@ -40,14 +39,7 @@ export function Hero195() {
           viewport={{ once: true }}
           className="flex flex-col items-center justify-center max-w-4xl mx-auto mb-16"
         >
-          <div className="flex justify-center mb-8">
-            <AnimatedBadge
-              text="Dashboards Exdot"
-              color="#4747F3"
-            />
-          </div>
-
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter mt-5 font-display text-foreground text-center">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter font-display text-foreground text-center">
             Visualize Seus Dados em Tempo Real
           </h2>
 
